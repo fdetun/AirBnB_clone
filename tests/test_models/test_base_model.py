@@ -35,6 +35,14 @@ class TestBaseModel(unittest.TestCase):
         b.my_number = 89
         self.assertNotEqual(a.id, b.id)
 
+    def test_0_2(self):
+        '''check update with save'''
+        fde = BaseModel()
+        a = fde.updated_at
+        fde.save()
+        b = fde.updated_at
+        self.assertNotEqual(a, b)
+
     def test_1_1(self):
         """dict test"""
         d = {"__class__": "BaseModel",
