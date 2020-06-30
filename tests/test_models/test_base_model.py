@@ -8,14 +8,6 @@ import uuid
 
 class TestBaseModel(unittest.TestCase):
     """BaseModel test"""
-    def testInit(self):
-        """Test init"""
-        test1 = BaseModel()
-        test1.my_num = 25
-        test1.my_name = "Foued"
-        mymodeldict = test1.to_dict()
-        self.assertIn("my_num", mymodeldict)
-        self.assertIn("my_name", mymodeldict)
 
     def test0(self):
         """test0"""
@@ -32,16 +24,43 @@ class TestBaseModel(unittest.TestCase):
         b = BaseModel()
         self.assertNotEqual(a.id, b.id)
 
+    def test_1_1(self):
+        """dict test"""
+        d = {"__class__": "BaseModel",
+             "id": uuid.uuid4(),
+             "updated_at": datetime(
+                 2017, 9, 28, 21, 5, 54, 119434).isoformat(),
+             "created_at": datetime.now().isoformat()}
+        base = BaseModel(**d)
+        self.assertEqual(base.to_dict(), d)
+
     def test_2(self):
         """str"""
         d = BaseModel()
         self.assertIsInstance(d.__str__(), str)
+
+    def test_3(self):
+        """str output check """
+        tst = BaseModel()
+        rslt = "[BaseModel] ({}) {}".format(tst.id, tst.__dict__)
+        self.assertEqual(tst.__str__(), rslt)
 
     def test_4(self):
         """dict"""
         d = BaseModel()
         self.assertIsInstance(d.to_dict(), dict)
 
+    def test5(self):
+        '''check instance'''
+        fde = BaseModel()
+        self.assertIsInstance(fde, BaseModel)
+
+    def test6(self):
+        """ to dict name """
+        fde = BaseModel()
+        fde.name = "Foued"
+        ok = fde.to_dict()
+        self.assertEqual(ok["name"], fde.name)
 
 if __name__ == '__main__':
     unittest.main()
