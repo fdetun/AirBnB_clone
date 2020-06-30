@@ -21,12 +21,18 @@ class TestBaseModel(unittest.TestCase):
     def test0_1(self):
         """teype id"""
         my_model = BaseModel()
+        my_model.name = "Holberton"
+        my_model.my_number = 89
         self.assertEqual(type(my_model.id), str)
 
     def test_1(self):
         """id"""
         a = BaseModel()
+        a.name = "Holberton"
+        a.my_number = 89
         b = BaseModel()
+        b.name = "Holberton"
+        b.my_number = 89
         self.assertNotEqual(a.id, b.id)
 
     def test_1_1(self):
