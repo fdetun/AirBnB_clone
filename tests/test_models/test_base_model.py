@@ -8,6 +8,14 @@ import uuid
 
 class TestBaseModel(unittest.TestCase):
     """BaseModel test"""
+    def testInit(self):
+        """Test init"""
+        test1 = BaseModel()
+        test1.my_num = 25
+        test1.my_name = "Foued"
+        mymodeldict = test1.to_dict()
+        self.assertIn("my_num", mymodeldict)
+        self.assertIn("my_name", mymodeldict)
 
     def test0(self):
         """test0"""
