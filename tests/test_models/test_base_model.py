@@ -9,6 +9,15 @@ import uuid
 class TestBaseModel(unittest.TestCase):
     """BaseModel test"""
 
+    def test0(self):
+        """test0"""
+        my_model = BaseModel()
+        my_model.name = "Foued"
+        my_model.my_number = 24
+        mymodeldict = my_model.to_dict()
+        self.assertEqual(type(mymodeldict["created_at"]), str)
+        self.assertEqual(type(mymodeldict["updated_at"]), str)
+
     def test_1(self):
         """id"""
         a = BaseModel()
