@@ -47,6 +47,15 @@ class TestFileStorage(unittest.TestCase):
         self.assertIn("BaseModel.{}".format(
             my_model.id), fde)
 
+    def test_reload_save(self):
+        """test Json"""
+        my_model = BaseModel()
+        my_model.name = "Holberton"
+        my_model.my_number = 89
+        my_model.save()
+        all_objs = storage.all()
+        self.assertNotEqual(my_model, all_objs)
+
     def test_99(self):
         """new without args"""
         with self.assertRaises(TypeError):
