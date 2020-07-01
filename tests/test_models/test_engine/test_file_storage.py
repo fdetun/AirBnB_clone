@@ -47,6 +47,14 @@ class TestFileStorage(unittest.TestCase):
         self.assertIn("BaseModel.{}".format(
             my_model.id), fde)
 
+    def test_update_after(self):
+        """test aftert update"""
+        fde = FileStorage._FileStorage__objects
+        file_path = FileStorage._FileStorage__file_path
+        a = BaseModel()
+        a.save()
+        self.assertIn('BaseModel.{}'.format(a.id), fde.keys())
+
     def test_reload_save(self):
         """test Json"""
         my_model = BaseModel()
