@@ -3,7 +3,6 @@
 file storage File
 """
 import json
-import os.path
 from models.base_model import BaseModel
 
 
