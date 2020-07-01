@@ -95,7 +95,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertNotEqual(my_model, all_objs)
 
     def test_99(self):
-        """new without args"""
+        """new test without args"""
         with self.assertRaises(TypeError):
             storage.new()
 
