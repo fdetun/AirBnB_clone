@@ -16,7 +16,7 @@ class FileStorage:
         return FileStorage.__objects
 
     def new(self, obj):
-        """all func"""
+        """new method"""
         a = obj.__class__.__name__
         b = obj.id
         FileStorage.__objects[str(a) + "." + str(b)] = obj
