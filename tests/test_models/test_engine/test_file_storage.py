@@ -37,7 +37,7 @@ class docs(unittest.TestCase):
         self.assertTrue(len(FileStorage.save.__doc__) > 0)
 
     def test_method_docs(self):
-        """docs check"""
+        """docs checker"""
         fde = dir(FileStorage)
         for i in fde:
             self.assertTrue(len(i.__doc__) > 0)
