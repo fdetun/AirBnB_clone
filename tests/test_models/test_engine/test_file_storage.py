@@ -15,16 +15,16 @@ from datetime import datetime
 
 class docs(unittest.TestCase):
     """Documtation Automatique test"""
-    def test_method_docs(self):
+    def testdocs(self):
         """docs check"""
         fde = "File Storage class"
         self.assertTrue(FileStorage.__doc__, fde)
 
-    def test_doc_all(self):
+    def testall(self):
         """ test """
         self.assertTrue(len(FileStorage.all.__doc__) > 0)
 
-    def test_doc_new(self):
+    def testnew(self):
         """ test """
         self.assertTrue(len(FileStorage.new.__doc__) > 0)
 
