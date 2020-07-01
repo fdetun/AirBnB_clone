@@ -58,7 +58,7 @@ class TestFileStorage(unittest.TestCase):
             my_model.id), storage.all().keys())
 
     def test_pep8(self):
-        '''pep8 styling'''
+        '''test of pep8'''
         check = "Found code style errors"
         f = pep8.StyleGuide(quiet=True)
         fde = f.check_files(
