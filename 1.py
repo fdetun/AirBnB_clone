@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 from models import storage
 from models.base_model import BaseModel
-
-all_objs = storage.all()
-print("-- Reloaded objects --")
-for obj_id in all_objs.keys():
-    obj = all_objs[obj_id]
-    print(obj)
-
-print("-- Create a new object --")
+import json
 my_model = BaseModel()
-print("----{}".format(my_model.id))
-print("----{}".format(type(my_model.id)))
 my_model.name = "Holberton"
 my_model.my_number = 89
 my_model.save()
-print(my_model)
+with open("file.json", 'r') as f:
+    fde=json.load(f)
+print(fde)
+a = "BaseModel"+"."+my_model.id
+if a in fde:
+    print("foued")
+print(type(fde))

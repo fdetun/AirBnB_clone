@@ -6,6 +6,7 @@ file storage test
 import unittest
 import time
 import os
+import json
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models import storage
@@ -24,6 +25,17 @@ class TestFileStorage(unittest.TestCase):
         my_model.save()
         self.assertIn("BaseModel.{}".format(
             my_model.id), storage.all().keys())
+
+    def test_json(self):
+        """test Json"""
+        my_model = BaseModel()
+        my_model.name = "Holberton"
+        my_model.my_number = 89
+        my_model.save()
+        with open("file.json", 'r') as f:
+            fde=json.load(f)
+        self.assertIn("BaseModel.{}".format(
+            my_model.id), fde)
 
     def test_99(self):
         """new without args"""
