@@ -119,5 +119,10 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(os.access("./models/engine/file_storage.py", os.X_OK))
         self.assertTrue(os.access("./models/engine/file_storage.py", os.F_OK))
 
+    def test11(self):
+        """test"""
+        os.remove("file.json")
+        self.assertRaises(Exception, storage.reload())
+
 if __name__ == '__main__':
     unittest.main()

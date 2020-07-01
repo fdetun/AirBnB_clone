@@ -17,3 +17,5 @@ my_model.my_number = 89
 my_model.save()
 print(my_model)
 print(FileStorage.__doc__)
+os.remove("file.json")
+storage.reload()
