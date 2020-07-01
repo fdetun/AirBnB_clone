@@ -8,16 +8,20 @@ import time
 import os
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
-from models.engine.file_storage import FileStorage
 from models import storage
 from datetime import datetime
 
 class TestFileStorage(unittest.TestCase):
     """ Tests FileStorage class """
-
+    
     def test2(self):
         """"""
         self.assertEqual(type(storage).__name__, "FileStorage")
+
+    def test_99(self):
+        """new without args"""
+        with self.assertRaises(TypeError):
+            storage.new()
 
     def test3(self):
         """check object types"""
