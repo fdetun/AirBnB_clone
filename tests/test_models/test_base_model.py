@@ -19,7 +19,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(mymodeldict["updated_at"]), str)
 
     def test0_1(self):
-        """teype id"""
+        """type id"""
         my_model = BaseModel()
         my_model.name = "Holberton"
         my_model.my_number = 89
