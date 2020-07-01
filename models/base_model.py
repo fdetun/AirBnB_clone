@@ -6,7 +6,7 @@ import models
 
 
 class BaseModel:
-    """ BaseModel class"""
+    """BaseModel class"""
     def __init__(self, *args, **kwargs):
         if kwargs:
             for key, value in kwargs.items():
