@@ -28,11 +28,11 @@ class docs(unittest.TestCase):
         """ test """
         self.assertTrue(len(FileStorage.new.__doc__) > 0)
 
-    def test_reload(self):
+    def testreload(self):
         """ test """
         self.assertTrue(len(FileStorage.reload.__doc__) > 0)
 
-    def test_save(self):
+    def testsave(self):
         """test"""
         self.assertTrue(len(FileStorage.save.__doc__) > 0)
 
