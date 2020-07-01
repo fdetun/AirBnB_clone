@@ -72,20 +72,15 @@ class TestFileStorage(unittest.TestCase):
             f = FileStorage(0, "sdsd", 99, 1, 8, {}, 41, 3, 1, 0, 7, [88, 1])
 
     def test5(self):
-        """test new without arguments"""
-        b = BaseModel()
-        with self.assertRaises(TypeError) as e:
-            FileStorage.save()
-        msg = "save() missing 1 required"
-        self.assertIn(msg, str(e.exception))
+        """Test new """
+        a = BaseModel()
+        lenght = len(FileStorage._FileStorage__objects)
+        storage.new(a)
+        self.assertTrue(lenght == len(FileStorage._FileStorage__objects))
 
     def test6(self):
-        """test save without too"""
-        b = BaseModel()
-        with self.assertRaises(TypeError) as e:
-            FileStorage.save(10, "sdsd")
-        msg = "save() takes 1 positional argument but 2 were given"
-        self.assertIn(msg, str(e.exception))
+        """reload"""
+        self.assertTrue(isinstance(FileStorage._FileStorage__objects, dict))
 
 if __name__ == '__main__':
     unittest.main()
