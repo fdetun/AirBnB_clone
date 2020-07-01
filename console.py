@@ -84,7 +84,7 @@ class HBNBCommand(cmd.Cmd):
     def do_all(self, line):
         """
         Prints all string representation of all instances based
-        or not on the class name.
+        or not on the class name
         """
         Args_l = line.split()
         if len(Args_l) == 1 and Args_l[0] != "BaseModel":
