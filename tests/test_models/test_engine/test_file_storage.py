@@ -71,16 +71,9 @@ class TestFileStorage(unittest.TestCase):
         with self.assertRaises(TypeError):
             f = FileStorage(0, "sdsd", 99, 1, 8, {}, 41, 3, 1, 0, 7, [88, 1])
 
-    def test5(self):
-        """Test new """
-        a = BaseModel()
-        lenght = len(FileStorage._FileStorage__objects)
-        storage.new(a)
-        self.assertTrue(lenght == len(FileStorage._FileStorage__objects))
-
-    def test6(self):
-        """reload"""
-        self.assertTrue(isinstance(FileStorage._FileStorage__objects, dict))
+    def test_FileStorage_path(self):
+        """check the the file path"""
+        self.assertTrue(isinstance(FileStorage._FileStorage__file_path, str))
 
 if __name__ == '__main__':
     unittest.main()
