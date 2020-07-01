@@ -15,9 +15,6 @@ from datetime import datetime
 class TestFileStorage(unittest.TestCase):
     """ Tests FileStorage class """
 
-    def test1(self):
-        pass
-
     def test2(self):
         """"""
         self.assertEqual(type(storage).__name__, "FileStorage")
