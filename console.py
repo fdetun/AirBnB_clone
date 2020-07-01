@@ -27,7 +27,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """
-        emptyline
+        enter == empty line
         """
         pass
 
