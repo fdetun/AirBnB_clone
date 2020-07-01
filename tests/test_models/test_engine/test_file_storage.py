@@ -5,7 +5,6 @@ file storage test
 import unittest
 import time
 import pep8
-import os
 import json
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
@@ -82,6 +81,14 @@ class TestFileStorage(unittest.TestCase):
     def test_FileStorage_path(self):
         """check the the file path"""
         self.assertTrue(isinstance(FileStorage._FileStorage__file_path, str))
+
+    def test_10(self):
+        """
+        object
+        """
+        fde = storage.all()
+        for i in fde.values():
+            self.assertTrue(i != dict)
 
 if __name__ == '__main__':
     unittest.main()
