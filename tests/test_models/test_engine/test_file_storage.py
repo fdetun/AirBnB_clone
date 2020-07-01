@@ -33,7 +33,7 @@ class docs(unittest.TestCase):
         self.assertTrue(len(FileStorage.reload.__doc__) > 0)
 
     def test_save(self):
-        """ test """
+        """test"""
         self.assertTrue(len(FileStorage.save.__doc__) > 0)
 
     def test_method_docs(self):
