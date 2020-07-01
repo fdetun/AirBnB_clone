@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the entry point of the command interpreter
+Contains the entry point of the cmd interpreter
 """
 import cmd
 from models import storage
