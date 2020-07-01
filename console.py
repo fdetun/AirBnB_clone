@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
         Creates a new instance of BaseModel.
         saves it (to the JSON file) and prints the id.
         """
-        if line is '':
+        if line == '':
             print("** class name missing **")
         elif line == "BaseModel":
             a = BaseModel()

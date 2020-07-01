@@ -81,5 +81,6 @@ class TestBaseModel(unittest.TestCase):
         ok = fde.to_dict()
         self.assertEqual(ok["name"], fde.name)
 
+
 if __name__ == '__main__':
     unittest.main()
