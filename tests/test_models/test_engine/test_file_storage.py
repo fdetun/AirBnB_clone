@@ -13,6 +13,16 @@ from models import storage
 from datetime import datetime
 
 
+class docs(unittest.TestCase):
+    """Documtation Automatique test"""
+
+    def test_method_docs(self):
+        """docs check"""
+        fde = dir(FileStorage)
+        for i in fde:
+            self.assertTrue(len(i.__doc__) > 0)
+
+
 class TestFileStorage(unittest.TestCase):
     """ Tests FileStorage class """
 
