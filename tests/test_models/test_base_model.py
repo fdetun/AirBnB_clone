@@ -65,7 +65,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(tst.__str__(), rslt)
 
     def test_4(self):
-        """dict"""
+        """dict cheker"""
         d = BaseModel()
         self.assertIsInstance(d.to_dict(), dict)
 
