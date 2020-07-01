@@ -9,7 +9,7 @@ from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
     """
-    Subclass of cmd.Cmd
+    HBNBCommand of cmd.Cmd
     """
     prompt = '(hbnb) '
 
