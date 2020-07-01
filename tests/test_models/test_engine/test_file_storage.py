@@ -78,7 +78,7 @@ class TestFileStorage(unittest.TestCase):
             my_model.id), fde)
 
     def test_update_after(self):
-        """test aftert update"""
+        """test after update"""
         fde = FileStorage._FileStorage__objects
         file_path = FileStorage._FileStorage__file_path
         a = BaseModel()
