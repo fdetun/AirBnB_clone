@@ -13,7 +13,7 @@ from models import storage
 from datetime import datetime
 
 
-class docs(unittest.TestCase):
+class MyDocs(unittest.TestCase):
     """Documtation Automatique test"""
     def testdocs(self):
         """docs check"""
