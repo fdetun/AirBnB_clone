@@ -15,6 +15,26 @@ from datetime import datetime
 
 class docs(unittest.TestCase):
     """Documtation Automatique test"""
+    def test_method_docs(self):
+        """docs check"""
+        fde = "File Storage class"
+        self.assertTrue(FileStorage.__doc__, fde)
+
+    def test_doc_all(self):
+        """ test """
+        self.assertTrue(len(FileStorage.all.__doc__) > 0)
+
+    def test_doc_new(self):
+        """ test """
+        self.assertTrue(len(FileStorage.new.__doc__) > 0)
+
+    def test_reload(self):
+        """ test """
+        self.assertTrue(len(FileStorage.reload.__doc__) > 0)
+
+    def test_save(self):
+        """ test """
+        self.assertTrue(len(FileStorage.save.__doc__) > 0)
 
     def test_method_docs(self):
         """docs check"""
