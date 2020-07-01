@@ -44,7 +44,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertNotEqual(a, b)
 
     def test_1_1(self):
-        """dict test"""
+        """dictionnaire check"""
         d = {"__class__": "BaseModel",
              "id": uuid.uuid4(),
              "updated_at": datetime(
