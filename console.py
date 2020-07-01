@@ -95,7 +95,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """Updates an instance based on the class name and id by
-        adding or updating attribute (save the change into the JSON file).
+        adding or updating attribute (save the change into the JSON file)
         """
         all_objs = storage.all()
         Args_l = line.split()
