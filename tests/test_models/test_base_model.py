@@ -54,7 +54,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(base.to_dict(), d)
 
     def test_2(self):
-        """str"""
+        """str check"""
         d = BaseModel()
         self.assertIsInstance(d.__str__(), str)
 
