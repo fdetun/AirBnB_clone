@@ -30,7 +30,7 @@ class FileStorage:
             json.dump(tmp, file)
 
     def reload(self):
-        """all func"""
+        """reload func"""
         try:
             with open(FileStorage.__file_path) as file:
                 data = json.load(file)
