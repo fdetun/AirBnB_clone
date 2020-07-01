@@ -59,7 +59,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(d.__str__(), str)
 
     def test_3(self):
-        """str output check """
+        """str output checker"""
         tst = BaseModel()
         rslt = "[BaseModel] ({}) {}".format(tst.id, tst.__dict__)
         self.assertEqual(tst.__str__(), rslt)
