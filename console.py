@@ -13,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = '(hbnb) '
 
-    def do_EOF(self,line):
+    def do_EOF(self, line):
         """
         Method to exit the program.
         """
