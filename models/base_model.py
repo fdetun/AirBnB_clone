@@ -34,8 +34,8 @@ class BaseModel:
 
     def to_dict(self):
         """to dict function"""
-        dict2 = dict(self.__dict__)
-        dict2["__class__"] = self.__class__.__name__
-        dict2["updated_at"] = self.updated_at.isoformat()
-        dict2["created_at"] = self.created_at.isoformat()
-        return dict2
+        dictnew = dict(self.__dict__)
+        dictnew["__class__"] = self.__class__.__name__
+        dictnew["updated_at"] = self.updated_at.isoformat()
+        dictnew["created_at"] = self.created_at.isoformat()
+        return dictnew
