@@ -4,6 +4,7 @@ file storage test
 """
 import unittest
 import time
+import os
 import pep8
 import json
 from models.base_model import BaseModel
@@ -83,12 +84,10 @@ class TestFileStorage(unittest.TestCase):
         self.assertTrue(isinstance(FileStorage._FileStorage__file_path, str))
 
     def test_10(self):
-        """
-        object
-        """
-        fde = storage.all()
-        for i in fde.values():
-            self.assertTrue(i != dict)
+        self.assertTrue(os.access("./models/engine/file_storage.py", os.R_OK))
+        self.assertTrue(os.access("./models/engine/file_storage.py", os.W_OK))
+        self.assertTrue(os.access("./models/engine/file_storage.py", os.X_OK))
+        self.assertTrue(os.access("./models/engine/file_storage.py", os.F_OK))
 
 if __name__ == '__main__':
     unittest.main()
