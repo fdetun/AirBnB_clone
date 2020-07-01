@@ -26,7 +26,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(type(my_model.id), str)
 
     def test_1(self):
-        """id"""
+        """id checker"""
         a = BaseModel()
         a.name = "Holberton"
         a.my_number = 89
