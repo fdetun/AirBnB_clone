@@ -44,7 +44,7 @@ class docs(unittest.TestCase):
 
 
 class TestFileStorage(unittest.TestCase):
-    """ Tests FileStorage class """
+    """ Tests FileStorage class"""
 
     def test0(self):
         """"""
