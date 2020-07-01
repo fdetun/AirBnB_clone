@@ -22,7 +22,7 @@ class FileStorage:
         FileStorage.__objects[str(a) + "." + str(b)] = obj
 
     def save(self):
-        """save func"""
+        """save method"""
         tmp = {}
         for key, value in FileStorage.__objects.items():
             tmp[key] = value.to_dict()
