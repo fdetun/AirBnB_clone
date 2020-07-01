@@ -8,6 +8,7 @@ import models
 class BaseModel:
     """BaseModel class"""
     def __init__(self, *args, **kwargs):
+        """init method"""
         if kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":
