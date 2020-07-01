@@ -36,7 +36,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertNotEqual(a.id, b.id)
 
     def test_0_2(self):
-        '''check update with save'''
+        '''check update with saving'''
         fde = BaseModel()
         a = fde.updated_at
         fde.save()
