@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-file storage test
+file storage test doc
 """
 import unittest
 import time
