@@ -86,7 +86,7 @@ class TestFileStorage(unittest.TestCase):
         self.assertIn('BaseModel.{}'.format(a.id), fde.keys())
 
     def test_reload_save(self):
-        """test Json"""
+        """test  of JSON"""
         my_model = BaseModel()
         my_model.name = "Holberton"
         my_model.my_number = 89
