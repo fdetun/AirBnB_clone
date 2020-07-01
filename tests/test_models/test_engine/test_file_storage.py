@@ -14,9 +14,16 @@ from datetime import datetime
 class TestFileStorage(unittest.TestCase):
     """ Tests FileStorage class """
     
-    def test2(self):
+    def test0(self):
         """"""
         self.assertEqual(type(storage).__name__, "FileStorage")
+
+    def test1(self):
+        """test basemodel object saving method"""
+        my_model = BaseModel()
+        my_model.save()
+        self.assertIn("BaseModel.{}".format(
+            my_model.id), storage.all().keys())
 
     def test_99(self):
         """new without args"""
