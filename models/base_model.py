@@ -23,7 +23,7 @@ class BaseModel:
             models.storage.new(self)
 
     def __str__(self):
-        """str func"""
+        """str method"""
         return ("[{}] ({}) {}".format(
             self.__class__.__name__, self.id, self.__dict__))
 
@@ -33,7 +33,7 @@ class BaseModel:
         models.storage.__class__.save(self)
 
     def to_dict(self):
-        """to dict function"""
+        """to dict method"""
         dictnew = dict(self.__dict__)
         dictnew["__class__"] = self.__class__.__name__
         dictnew["updated_at"] = self.updated_at.isoformat()
