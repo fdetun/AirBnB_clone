@@ -5,7 +5,7 @@ State Class
 from models.base_model import BaseModel
 
 
-class Place(BaseModel):
+class Review(BaseModel):
     """
     Review inherit from BaseModel.
     """
