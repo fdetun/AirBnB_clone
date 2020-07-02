@@ -43,6 +43,12 @@ class TestBaseModel(unittest.TestCase):
         b = fde.updated_at
         self.assertNotEqual(a, b)
 
+    def test_updatenow(self):
+        '''check update with saving'''
+        fde = BaseModel()
+        x, y=fde.save(), datetime.now()
+        self.assertNotEqual(fde.updated_at, y)
+
     def test_1_1(self):
         """dictionnaire check"""
         d = {"__class__": "BaseModel",
