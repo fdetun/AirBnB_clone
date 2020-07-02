@@ -46,7 +46,7 @@ class TestBaseModel(unittest.TestCase):
     def test_updatenow(self):
         '''check update with saving'''
         fde = BaseModel()
-        x, y=fde.save(), datetime.now()
+        x, y=fde.save(), datetime.utcnow()
         self.assertNotEqual(fde.updated_at, y)
 
     def test_1_1(self):
