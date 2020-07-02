@@ -9,9 +9,9 @@ class Place(BaseModel):
     """
     Place inherit from BaseModel.
     """
-    name = ""
     city_id = ""
     user_id = ""
+    name = ""
     description = ""
     number_rooms = 0
     number_bathrooms = 0
