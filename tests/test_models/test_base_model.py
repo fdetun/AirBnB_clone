@@ -4,6 +4,8 @@ import unittest
 from models.base_model import BaseModel
 from datetime import datetime
 import uuid
+import time
+
 
 
 class TestBaseModel(unittest.TestCase):
@@ -90,6 +92,15 @@ class TestBaseModel(unittest.TestCase):
     def test_updatetypy(self):
         """test"""
         self.assertTrue(isinstance(BaseModel().updated_at, datetime))
+
+    def test_save_update(self):
+        """save()method."""
+        a = BaseModel()
+        time.sleep(0.5)
+        fde = datetime.now()
+        a.save()
+        diff = a.updated_at - fde
+        self.assertTrue(diff.total_seconds() < 0.01)
 
 if __name__ == '__main__':
     unittest.main()
