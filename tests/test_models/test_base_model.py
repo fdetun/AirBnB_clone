@@ -7,7 +7,6 @@ import uuid
 import time
 
 
-
 class TestBaseModel(unittest.TestCase):
     """BaseModel test"""
 
@@ -48,7 +47,7 @@ class TestBaseModel(unittest.TestCase):
     def test_updatenow(self):
         '''check update with saving'''
         fde = BaseModel()
-        x, y=fde.save(), datetime.utcnow()
+        x, y = fde.save(), datetime.utcnow()
         self.assertNotEqual(fde.updated_at, y)
 
     def test_1_1(self):
@@ -101,6 +100,7 @@ class TestBaseModel(unittest.TestCase):
         a.save()
         diff = a.updated_at - fde
         self.assertTrue(diff.total_seconds() < 0.01)
+
 
 if __name__ == '__main__':
     unittest.main()

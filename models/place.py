@@ -4,6 +4,7 @@ State Class
 """
 from models.base_model import BaseModel
 
+
 class Place(BaseModel):
     """
     Place inherit from BaseModel.
@@ -19,4 +20,3 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
-    
