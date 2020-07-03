@@ -5,11 +5,13 @@ import json
 
 from models.base_model import BaseModel
 from models.user import User
+from models.city import City
+from models.state import State
+from models.place import Place
+from models.review import Review
+from models.amenity import Amenity
 
-
-Cls = {"BaseModel": BaseModel, "User": User}
-
-
+Cls = {"BaseModel":BaseModel, "User":User, "City":City, "State":State, "Place":Place, "Review":Review, "amenity":Amenity}
 class FileStorage:
     """
     """
@@ -31,7 +33,7 @@ class FileStorage:
     def save(self):
         """
         serializes __objects to the JSON file (path: __file_path)
-        __objects must be updated
+        __objects must be updated 
         """
         Tmp_dict = {}
         for Key, Val in FileStorage.__objects.items():
@@ -49,8 +51,7 @@ class FileStorage:
         try:
             with open(FileStorage.__file_path, "r") as f:
                 tmp = json.load(f)
-                for Key, Value in tmp.items():
-                    FileStorage.__objects[str(Key)] = Cls[Key.split(".")[
-                        0]](**Value)
+                for Key, Value in  tmp.items():
+                    FileStorage.__objects[str(Key)] = Cls[Key.split(".")[0]](**Value)
         except Exception as e:
             pass

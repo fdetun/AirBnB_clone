@@ -4,14 +4,13 @@ State Class
 """
 from models.base_model import BaseModel
 
-
 class Place(BaseModel):
     """
     Place inherit from BaseModel.
     """
+    name = ""
     city_id = ""
     user_id = ""
-    name = ""
     description = ""
     number_rooms = 0
     number_bathrooms = 0
@@ -20,3 +19,4 @@ class Place(BaseModel):
     latitude = 0.0
     longitude = 0.0
     amenity_ids = []
+    
