@@ -46,6 +46,15 @@ class HBNBCommand(cmd.Cmd):
         """
         pass
 
+    def counter(self, clas):
+        """counter class"""
+        j = 0
+        all_objs = storage.all()
+        for i in all_objs.values():
+            if i.__class__.__name__ == clas:
+                j = j + 1
+        return j
+
     def do_create(self, line):
         """
         Creates a new instance of BaseModel.
@@ -143,36 +152,58 @@ class HBNBCommand(cmd.Cmd):
         """User.all()"""
         if arg == ".all()":
             self.do_all("User")
+        elif arg == ".count()":
+            a = self.counter("User")
+            print(a)
 
     def do_BaseModel(self, arg):
         """BaseModel.all()"""
         if arg == ".all()":
             self.do_all("BaseModel")
+        elif arg == ".count()":
+            a = self.counter("BaseModel")
+            print(a)
 
     def do_City(self, arg):
         """City.all()"""
         if arg == ".all()":
             self.do_all("City")
+        elif arg == ".count()":
+            a = self.counter("City")
+            print(a)
 
     def do_State(self, arg):
         """State.all()"""
         if arg == ".all()":
             self.do_all("State")
+        elif arg == ".count()":
+            a = self.counter("State")
+            print(a)
 
     def do_Place(self, arg):
         """Place.all()"""
         if arg == ".all()":
             self.do_all("Place")
+        elif arg == ".count()":
+            a = self.counter("Place")
+            print(a)
 
     def do_Review(self, arg):
         """Review.all()"""
         if arg == ".all()":
             self.do_all("Review")
+        elif arg == ".count()":
+            a = self.counter("Review")
+            print(a)
 
     def do_Amenity(self, arg):
         """Amenity.all()"""
         if arg == ".all()":
             self.do_all("Amenity")
+        elif arg == ".count()":
+            a = self.counter("Amenity")
+            print(a)
+
 
 if __name__ == "__main__":
     """
