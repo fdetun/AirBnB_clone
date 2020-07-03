@@ -139,6 +139,40 @@ class HBNBCommand(cmd.Cmd):
             all_objs[id] = tmpBase
             storage.save()
 
+    def do_User(self, arg):
+        """User.all()"""
+        if arg == ".all()":
+            self.do_all("User")
+
+    def do_BaseModel(self, arg):
+        """BaseModel.all()"""
+        if arg == ".all()":
+            self.do_all("BaseModel")
+
+    def do_City(self, arg):
+        """City.all()"""
+        if arg == ".all()":
+            self.do_all("City")
+
+    def do_State(self, arg):
+        """State.all()"""
+        if arg == ".all()":
+            self.do_all("State")
+
+    def do_Place(self, arg):
+        """Place.all()"""
+        if arg == ".all()":
+            self.do_all("Place")
+
+    def do_Review(self, arg):
+        """Review.all()"""
+        if arg == ".all()":
+            self.do_all("Review")
+
+    def do_Amenity(self, arg):
+        """Amenity.all()"""
+        if arg == ".all()":
+            self.do_all("Amenity")
 
 if __name__ == "__main__":
     """
