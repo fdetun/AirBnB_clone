@@ -1,0 +1,7 @@
+header {
+     border-bottom: 1px solid #ccc;
+     height: 70px;
+     width: 100%;
+     background: #fff url('../images/logo.png') 20px;
+     background-repeat: no-repeat;
+}
